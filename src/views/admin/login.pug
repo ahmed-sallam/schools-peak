@@ -1,0 +1,53 @@
+extends ../base.pug
+block head
+    link(rel="stylesheet", href="/ltr/assets/css/authentication/form-2.css") 
+    link(rel="stylesheet", href="/ltr/assets/css/forms/theme-checkbox-radio.css")
+    link(rel="stylesheet", href="/ltr/assets/css/forms/switches.css")
+block body
+    .form-container.outer
+        .form-form
+            .form-form-wrap
+                .form-container
+                    .form-content
+                        h1 Schools-Peak
+                        p Log in to your account to continue.
+                        form.text-left
+                            .form
+                                #username-field.field-wrapper.input
+                                    label(for='username') USERNAME
+                                    svg.feather.feather-user(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                        path(d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2')
+                                        circle(cx='12', cy='7', r='4')
+                                    input#username.form-control(name='username', type='text', placeholder='e.g John_Doe')
+                                #password-field.field-wrapper.input.mb-2
+                                    .d-flex.justify-content-between
+                                        label(for='password') PASSWORD
+                                        a.forgot-pass-link(href='auth_pass_recovery_boxed.html') Forgot Password?
+                                    svg.feather.feather-lock(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                        rect(x='3', y='11', width='18', height='11', rx='2', ry='2')
+                                        path(d='M7 11V7a5 5 0 0 1 10 0v4')
+                                    input#password.form-control(name='password', type='password', placeholder='Password')
+                                    svg#toggle-password.feather.feather-eye(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                        path(d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z')
+                                        circle(cx='12', cy='12', r='3')
+                                .d-sm-flex.justify-content-between
+                                    .field-wrapper
+                                        button.btn.btn-primary(type='submit', value='') Log In
+                                .division
+                                //-     span OR
+                                //- .social
+                                //-     a.btn.social-fb(href='javascript:void(0);')
+                                //-         svg.feather.feather-facebook(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                //-             path(d='M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z')
+                                //-         span.brand-name Facebook
+                                //-     a.btn.social-github(href='javascript:void(0);')
+                                //-         svg.feather.feather-github(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none', stroke='currentColor', stroke-width='2', stroke-linecap='round', stroke-linejoin='round')
+                                //-             path(d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22')
+                                //-         span.brand-name Github
+                                //- p.signup-link
+                                //-     | Not registered ? 
+                                //-     a(href='auth_register_boxed.html') Create an account
+
+
+block script1
+    script(src="/ltr/assets/js/authentication/form-2.js")

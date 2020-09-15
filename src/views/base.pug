@@ -1,0 +1,44 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title=title
+
+        link(rel="stylesheet", href="/ltr/assets/css/loader.css")
+        script(src="/ltr/assets/js/loader.js")
+
+        //- BEGIN GLOBAL MANDATORY STYLES
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Nunito:400,600,700")
+        link(rel="stylesheet", href="/ltr/bootstrap/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/ltr/assets/css/plugins.css")
+        //- END GLOBAL MANDATORY STYLES
+
+        //- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES
+        block head
+        style.
+            .layout-px-spacing {
+                min-height: calc(100vh - 166px)!important;
+            }
+            
+
+
+    body
+        block body
+
+
+        //- <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+        script(src="/ltr/assets/js/libs/jquery-3.1.1.min.js")
+        script(src="/ltr/bootstrap/js/popper.min.js")
+        script(src="/ltr/bootstrap/js/bootstrap.min.js")
+        script(src="/ltr/plugins/perfect-scrollbar/perfect-scrollbar.min.js")
+        script(src="/ltr/assets/js/app.js")
+        script(src="/ltr/assets/js/custom.js")
+        script.
+            $(document).ready(function() {
+                App.init();
+            });
+        
+        //- <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+
+        block script1
